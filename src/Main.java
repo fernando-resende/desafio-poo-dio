@@ -10,12 +10,17 @@ public class Main {
         Curso curso1 = new Curso();
         curso1.setTitulo("curso java");
         curso1.setDescricao("descrição curso java");
-        curso1.setCargaHoraria(8);
+        curso1.setCargaHoraria(10000);
 
         Curso curso2 = new Curso();
         curso2.setTitulo("curso js");
         curso2.setDescricao("descrição curso js");
-        curso2.setCargaHoraria(4);
+        curso2.setCargaHoraria(8);
+
+        Curso curso3 = new Curso();
+        curso2.setTitulo("curso bd");
+        curso2.setDescricao("descrição curso bd");
+        curso2.setCargaHoraria(20);
 
         Mentoria mentoria = new Mentoria();
         mentoria.setTitulo("mentoria de java");
@@ -31,6 +36,7 @@ public class Main {
         bootcamp.setDescricao("Descrição Bootcamp Java Developer");
         bootcamp.getConteudos().add(curso1);
         bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(curso3);
         bootcamp.getConteudos().add(mentoria);
 
         Dev devCamila = new Dev();
@@ -42,9 +48,10 @@ public class Main {
         System.out.println("-");
         System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
         System.out.println("Conteúdos Concluídos Camila:" + devCamila.getConteudosConcluidos());
-        System.out.println("XP:" + devCamila.calcularTotalXp());
+        // System.out.println("XP:" + devCamila.calcularTotalXp());
+        System.out.println(devCamila.getLevelManager().toString());
 
-        System.out.println("-------");
+        System.out.println("\n-------\n");
 
         Dev devJoao = new Dev();
         devJoao.setNome("Joao");
@@ -53,10 +60,12 @@ public class Main {
         devJoao.progredir();
         devJoao.progredir();
         devJoao.progredir();
+        devJoao.progredir();
         System.out.println("-");
         System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
         System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
-        System.out.println("XP:" + devJoao.calcularTotalXp());
+        // System.out.println("XP:" + devJoao.calcularTotalXp());
+        System.out.println(devJoao.getLevelManager().toString());
 
     }
 
